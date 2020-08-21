@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NaHy Dressing Room</title>
+  <link rel="icon" type="png" href="./Image/title.png">
+	<link rel="stylesheet" type="text/css" href="./style_head.css">
+	<link rel="stylesheet" type="text/css" href="./element_style.css">
+	<script src="https://kit.fontawesome.com/e9a6ecd83d.js" crossorigin="anonymous"></script>
+	<script type=”text/javascript” src=”https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js”></script>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.18.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.18.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+</head>
+<body>
+	<!-- tarbar -->
+	<section class="main">
+		<nav class="roll-menu" role="navigation" itemscope itemtype="https://schema.org/siteNavigationElement">
+			<div class="head">
+				<div class="logo"><a href=""><img src="./Image/Logo.jpg"></a></div>
+				<div class="menu">
+						<ul class="main-menu">
+							<li><a href=".">Home</a></li>
+							<li class="shop-menu"><a class="menu-after" href="#">Shop</a>
+								<ul class="drop dropdown-shop">
+									<li><a href="#">Shop Đại An</a></li>
+									<li><a href="#">Shop Lê Lai</a></li>
+								</ul>
+							</li>
+							<li class="page-menu"><a class="menu-after" href="#">Pages</a>
+								<ul class="drop dropdown-page">
+									<li><a href="https://www.facebook.com/nahydressingroombynganguyen/">My Page</a></li>
+									<li><a href="https://www.facebook.com/nguyen.nga.739">My Account</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Element</a>
+							</li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+				</div>
+				<div class="icon">
+					<div><a href="#"><img class="user" src="./Image/user-regular.svg"></a></div>
+					<div><a href="#"><img class="icon-shop" src="./Image/shopping-cart-solid.svg"></a></div>
+					<div><span><img class="icon-dola" src="./Image/dollar-sign-solid.svg">0.00</span></div>
+				</div>
+			</div>
+		</nav>
+	</section>
+<!-- menu & Poster PR -->	
+	<div class="element-main-section-wrap">
+		<section class="element-inner">
+			<div class="show-element">
+				<div class="show-column">
+					<div class="title-show">
+						<div>
+							<img class="bar-icon" src="https://www.radiustheme.com/demo/wordpress/themes/metro/wp-content/themes/metro/assets/img/menubar.png"></img>
+						</div>
+						<div class="little"><h3>CATEGORIES</h3></div>
+					</div>
+					<nav class="kind">
+						<ul class="kind-object">
+							<li><a href="#">Men</a></li>
+							<li><a href="#">Women</a></li>
+							<li class="electric-menu"><a class="electric-after" href="#">Electronics</a>
+								<ul class="drop-electric">
+									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Computer</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Jewellery</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Kid's Wear</a></li>
+							<li><a href="#">Sports</a></li>
+							<li><a href="#">Toys</a></li>
+							<li class="li-bottom"><a href="#">Gift Corners</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="poster-search">
+					<div class="search">
+						<div class="search-product">
+							<form>
+								<div class="input-group">
+									<input class="input-after" type="text" name="s" placeholder="Search Items Here">
+								</div>
+							</form>
+						</div>
+						<div class="search-drop">
+							<div class="select-dropdown">
+								<div class="part-select">
+									<div class="selection">
+										<ul>
+											<li>All categories</li>
+										</ul>
+										<div class="select-button">
+											<button type="button"><i class="fas fa-caret-down"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="button-search">
+								<button type="submit">
+									<i class="fas fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="PR">
+						<div class="pic-pr"></div>
+						<div class="poster-left">
+							<div class="poster-under">
+								<h3>Summer
+									<span style="background-color:#000; color:#fff; font-size:50px;padding: 4px 16px;">
+										Sale
+									</span>
+								</h3>
+								<p>KAREN MAXI cho mùa hè này<br></br>Siêu phẩm dành cho các nàng đi biển, đi du lịch</p>
+								<a class="under-after" href="#">Khám phá ngay</a>
+							</div>
+							<div class="poster-behind">
+								<span class="pic-index">03  </span>
+								<span class="have-icon"> 02  </span>
+								<span class="have-icon"> 01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- picture PR -->
+		<section class="container-behind">
+			<div class="container">
+				<div class="con">
+					<div class="element-left">
+						<a  href="#">
+							<div class="ele-pic1">
+								<img class="pic1" src="./Image/element1.jpg">
+							</div>
+							<div class="have-content">
+								<div class="content-pic1">
+									<h3>WOMEN'S</h3>
+									<h5>Trending 2020</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class= "con">
+					<div class="element-right">
+						<a href="#">
+							<div class="ele-pic2">
+								<img class="pic2" src="./Image/element2.jpg">
+							</div>
+							<div class="have-content">
+								<div class="content-pic2">
+									<h3>MEN'S</h3>
+									<h5>Collection 2020</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--product-->
+		<section class="our-product">
+			<div class="wrap-product">
+				<div class="element-column-wrap">
+					<div class="main-our-product">
+						<div class="title-product">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+</body>
+</html>
