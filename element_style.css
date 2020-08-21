@@ -267,6 +267,7 @@ i{
 	width: 635px;
 	height: 305px;
 	padding: 10px;
+	border-radius: 5px;
 }
 .pic1{
 	width: 100%;
@@ -312,10 +313,12 @@ h5::after{
 .element-left{
 	position: relative;
 	overflow: hidden;
+	height: 305px;
 }
 .element-right{
 	position: relative;
 	overflow: hidden;
+	height: 305px;
 }
 .content-pic1{
 	color: #fff;
@@ -380,7 +383,52 @@ a.electric-after{
 }
 
 .title-product h3{
-	text-transform: uppercase;
-	font-size: 20px;
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 14px 0;
+	font-size: 23px;
 	text-align:center;
+	font-weight: 600px;
+}
+.subject{
+	margin-bottom: 50px;
+}
+.subject div a{
+	margin:0 15px;
+	padding-bottom: 12px;
+	font-size: 18px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #777;
+}
+a.present{
+	color: #000 !important;
+	position: relative;
+}
+a.present::after{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: "";
+	background-color: #000;
+	width: 100%;
+	height: 2px;
+}
+.sale-rate{
+	background-color: #f1b4b4;
+	color: #fff;
+	padding: 4px 1px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.area-title h3{
+	font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom:0;
+    transition: all 0.3s;
+    padding-bottom: 10px; 
 }

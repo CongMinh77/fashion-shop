@@ -6,7 +6,9 @@ body, ul, li, input{
 	font-style: normal;
 	margin: 0 auto;
 }
-
+button, a{
+	cursor: pointer;
+}
 nav, ul.main-menu{
 	height:100%;
 	margin: 0;
