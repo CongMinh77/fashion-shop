@@ -9,6 +9,9 @@ body, ul, li, input{
 button, a{
 	cursor: pointer;
 }
+html{
+	scroll-behavior: smooth;
+}
 nav, ul.main-menu{
 	height:100%;
 	margin: 0;
