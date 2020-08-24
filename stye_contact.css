@@ -1,0 +1,11 @@
+.pattern {
+  height: 337px;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+span {
+  display: inline-block;
+  text-indent: -2rem;
+  position: relative;
+}

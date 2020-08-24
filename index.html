@@ -2,17 +2,18 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	 <link rel="icon" href="./Image/title.png" type="image/png">
+	<link rel="icon" href="./Image/title.png" type="image/png">
 	<title>NaHy Dressing Room</title>
 	<link rel="stylesheet" type="text/css" href="./style_head.css">
 	<link rel="stylesheet" type="text/css" href="./element_style.css">
 	<script src="https://kit.fontawesome.com/e9a6ecd83d.js" crossorigin="anonymous"></script>
-	<script type=”text/javascript” src=”https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js”></script>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<!-- tarbar -->
 	<section class="main">
-		<nav class="roll-menu" role="navigation" itemscope itemtype="https://schema.org/siteNavigationElement">
+		<nav class="roll-menu" itemscope itemtype="https://schema.org/siteNavigationElement">
 			<div class="head">
 				<div class="logo"><a href=""><img src="./Image/Logo.jpg"></a></div>
 				<div class="menu">
@@ -24,20 +25,30 @@
 									<li><a href="#">Shop Lê Lai</a></li>
 								</ul>
 							</li>
-							<li class="page-menu"><a class="menu-after" href="#">Pages</a>
+							<li class="page-menu">
+								<a class="menu-after" href="https://www.facebook.com/nahydressingroombynganguyen/">Pages</a>
 								<ul class="drop dropdown-page">
-									<li><a target="_blank" href="https://www.facebook.com/nahydressingroombynganguyen/">My Page</a></li>
+									<li><a target="_blank" href="#">About Us</a></li>
 									<li><a target="_blank" href="https://www.facebook.com/nguyen.nga.739">My Account</a></li>
 								</ul>
 							</li>
 							<li><a href="#">Element</a>
 							</li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="./contact.html">Contact</a></li>
 						</ul>
 				</div>
 				<div class="icon">
 					<div><a href="#"><img class="user" src="./Image/user-solid.svg"></a></div>
-					<div><a href="#"><img class="icon-shop" src="./Image/shopping-cart-solid.svg"></a></div>
+					<div class="cart-hover" style="position: relative;">
+						<a href="#"><img class="icon-shop" src="./Image/shopping-cart-solid.svg"></a>
+						<div class="cart-icon">
+							<div style="width: 100%; height: 100%">
+								<p>
+									No products in the cart	
+								</p>
+							</div>
+						</div>
+					</div>
 					<div><span><img class="icon-dola" src="./Image/dollar-sign-solid.svg">0.00</span></div>
 				</div>
 			</div>
@@ -86,12 +97,14 @@
 							<div class="select-dropdown">
 								<div class="part-select">
 									<div class="selection">
-										<ul>
-											<li>All categories</li>
-										</ul>
-										<div class="select-button">
-											<button type="button"><i class="fas fa-caret-down"></i></button>
-										</div>
+										<button type="button">
+											<ul style="padding: 0;">
+												<li>All categories</li>
+											</ul>
+											<div class="select-button">
+												<i class="fas fa-caret-down"></i>
+											</div>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -730,7 +743,7 @@
 						</div>
 						<div style="display: block; margin:auto;">
 							<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
-								<li class="icon-footer" style="margin: 0">
+								<li class="icon-footer">
 									<a href="#" target="_blank">
 										<i class="fa fa-facebook"></i>
 									</a>
@@ -785,5 +798,6 @@
 		<i class="fa fa-angle-double-up"></i>
 	</button>
 	<script type="text/javascript" src="function.js"></script>
+	
 </body>
 </html>

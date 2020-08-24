@@ -19,3 +19,24 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+var header = document.getElementByClassName("roll-menu");
+window.onscroll = function(){
+ if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+    header.style.position = "fixed";
+  } else {
+    header.style.position = "relative";
+  }
+};
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if($("document").scrollTop() > 90)
+		{
+			$(".roll-menu").addClass("stuck");
+		}
+		else{
+			$(".roll-menu").removeClass("stuck");
+		}	
+	});
+});
