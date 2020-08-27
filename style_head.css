@@ -6,6 +6,7 @@ body, ul, li, input{
 	font-style: normal;
 	margin: 0 auto;
 }
+
 button, a{
 	cursor: pointer;
 }

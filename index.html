@@ -7,8 +7,17 @@
 	<link rel="stylesheet" type="text/css" href="./style_head.css">
 	<link rel="stylesheet" type="text/css" href="./element_style.css">
 	<script src="https://kit.fontawesome.com/e9a6ecd83d.js" crossorigin="anonymous"></script>
-	<script src="jquery-3.5.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script defer src="/__/firebase/7.18.0/firebase-app.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<script defer src="/__/firebase/7.18.0/firebase-auth.js"></script>
+	<script defer src="/__/firebase/7.18.0/firebase-database.js"></script>
+	<script defer src="/__/firebase/7.18.0/firebase-messaging.js"></script>
+	<script defer src="/__/firebase/7.18.0/firebase-storage.js"></script>
+	<!-- initialize the SDK after all desired features are loaded -->
+	<script defer src="/__/firebase/init.js"></script>
+
 </head>
 <body>
 	<div class="element-main-section-wrap">
@@ -50,7 +59,7 @@
 								</div>
 							</div>
 						</div>
-						<div><span><img class="icon-dola" src="./Image/dollar-sign-solid.svg">0.00</span></div>
+						<div><img class="icon-dola" src="./Image/dollar-sign-solid.svg"><span id="add-money">0.00</span></div>
 					</div>
 				</div>
 			</nav>
@@ -115,22 +124,88 @@
 							</div>
 						</div>
 					</div>
-					<div class="PR">
-						<div class="pic-pr"></div>
-						<div class="poster-left">
-							<div class="poster-under">
-								<h3>Summer
-									<span style="background-color:#000; color:#fff; font-size:50px;padding: 4px 16px;">
-										Sale
-									</span>
-								</h3>
-								<p>KAREN MAXI cho mùa hè này<br></br>Siêu phẩm dành cho các nàng đi biển, đi du lịch</p>
-								<a class="under-after" href="#">Khám phá ngay</a>
+					<div style="position: relative;overflow: hidden;box-sizing: border-box;">
+						<div style="margin: auto;width:auto;display: flex;overflow: hidden;transition: all 0.25s ease 0s;transform: translate3d(0px, 0px, 0px);">
+							<div class="outside-pr fade">
+								<div class="PR">
+									<div class="pic-pr"></div>
+									<div class="poster-left">
+										<div class="poster-under">
+											<h3>Summer
+												<span style="background-color:#000; color:#fff; font-size:50px;padding: 4px 16px;">
+													Sale
+												</span>
+											</h3>
+											<p>
+												KAREN MAXI cho mùa hè này
+												<br></br>
+												Siêu phẩm dành cho các nàng đi biển, đi du lịch
+											</p>
+											<a class="under-after" href="https://www.facebook.com/pg/nahydressingroombynganguyen/photos/?tab=album&album_id=3002134829873463&ref=page_internal">
+												Khám phá ngay
+											</a>
+										</div>
+										<div class="poster-behind">
+											<span class="pic-index" onclick="currentSlide(1)">01  </span>
+											<span class="have-icon" onclick="currentSlide(2)"> 02  </span>
+											<span class="have-icon" onclick="currentSlide(3)"> 03 </span>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="poster-behind">
-								<span class="pic-index">03  </span>
-								<span class="have-icon"> 02  </span>
-								<span class="have-icon"> 01 </span>
+							<div class="outside-pr fade">
+								<div class="PR">
+									<div class="pic-pr1"></div>
+									<div class="poster-left">
+										<div class="poster-under">
+											<h3>Autumn
+												<span style="background-color:#000; color:#fff; font-size:50px;padding: 4px 16px;">
+													Sale
+												</span>
+											</h3>
+											<p>
+												Trọn bộ Hoodie và áo khoác ngoài Bomber
+												<br></br>
+												Dành cho các chàng trai phong cách đường phố
+											</p>
+											<a class="under-after" href="https://www.instagram.com/p/B9p_rxhJ8Ew/">
+												Khám phá ngay
+											</a>
+										</div>
+										<div class="poster-behind">
+											<span class="have-icon-after" onclick="currentSlide(1)">01  </span>
+											<span class="pic-index" onclick="currentSlide(2)"> 02  </span>
+											<span class="have-icon" onclick="currentSlide(3)"> 03 </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="outside-pr fade">
+								<div class="PR">
+									<div class="pic-pr2"></div>
+									<div class="poster-left">
+										<div class="poster-under">
+											<h3>Winter
+												<span style="background-color:#000; color:#fff; font-size:50px;padding: 4px 16px;">
+													Sale
+												</span>
+											</h3>
+											<p>
+												Áo khoác gió siêu nhẹ, siêu ấm
+												<br></br>
+												Đặc biệt dành cho các anh chàng ưu khám phá, đi phượt
+											</p>
+											<a class="under-after" href="https://www.facebook.com/pg/nahydressingroombynganguyen/photos/?tab=album&album_id=3002134829873463&ref=page_internal">
+												Khám phá ngay
+											</a>
+										</div>
+										<div class="poster-behind">
+											<span class="have-icon-after" onclick="currentSlide(1)">01  </span>
+											<span class="have-icon-after" onclick="currentSlide(2)"> 02  </span>
+											<span class="pic-index" onclick="currentSlide(3)"> 03 </span>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -142,7 +217,7 @@
 			<div class="container">
 				<div class="con">
 					<div class="element-left">
-						<a  href="#">
+						<a style="height: 305px;" href="#">
 							<div class="ele-pic1" style="height: 305px;">
 								<img class="pic1" src="./Image/element1.jpg">
 							</div>
@@ -157,7 +232,7 @@
 				</div>
 				<div class= "con">
 					<div class="element-right">
-						<a href="#">
+						<a style="height: 305px;" href="#">
 							<div class="ele-pic2">
 								<img class="pic2" src="./Image/element2.jpg">
 							</div>
@@ -191,10 +266,10 @@
 							</div>
 							<div>
 								<div style="display: flex;margin-bottom: 20px;">
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
-												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div  style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
+												<a href="#" style="height: 369px;"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
 											<div class="area-title">
@@ -216,9 +291,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 											</div>
 											<div class="area-title">
@@ -240,9 +315,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div  class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
@@ -265,9 +340,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px; padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px; padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
@@ -292,10 +367,10 @@
 									</div>
 								</div>
 								<div style="display: flex;margin-bottom: 20px;">
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
-												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div  style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
+												<a href="#" style="height: 369px;"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
 											<div class="area-title">
@@ -317,9 +392,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 											</div>
 											<div class="area-title">
@@ -341,9 +416,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div  class="hover-effect" style="overflow:hidden;height: 460px; width: 300px;padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
@@ -366,9 +441,9 @@
 											</div>
 										</div>
 									</div>
-									<div style="overflow:hidden;height: 460px; width: 300px; padding: 0 12px;">
-										<div class="hover-effect" style="width: 300px; height: 369px;position: relative;">
-											<div  style="margin-bottom: 20px; height: 100%">
+									<div class="hover-effect" style="overflow:hidden;height: 460px; width: 300px; padding: 0 12px;">
+										<div style="width: 300px; height: 369px;position: relative;">
+											<div class="overflowr-img">
 												<a href="#" style="height: 369px"><img style="width: 300px;height: 369px;border-radius: 4px;position: relative;transition: all 0.3s;" src="./Image/pr1.jpg"></a>
 												<span class="sale-rate">-10%</span>
 											</div>
@@ -392,7 +467,6 @@
 										</div>
 									</div>
 								</div>
-								
 							</div>
 							<div style="margin-top: 10px;text-align: center;">
 								<a class="view-all" href="#">View All Products</a>
@@ -547,8 +621,8 @@
 			</div>
 		</section>
 		<!--Image Insta-->
-		<div style="width: 1349px;height:169px;left: 0;">
-			<div style="width: 1349px;height:169px;position: relative;">
+		<div style="width: auto;height:169px;left: 0;">
+			<div style="width: auto;height:169px;position: relative;">
 				<div style="display: flex;width: 100%;height: 100%">
 					<div style="width: 12.5%; height: 100%">
 						<div style="width: 100%;height: 100%; position: relative;">
@@ -634,8 +708,8 @@
 			</div>
 		</section>
 		<!--Footer-->
-		<footer style="width: 1349px; height: 555px;background: #f1b4b4">
-			<div style="padding:80px 0 30px;width: 1349px; height: 306px;">
+		<footer style="width: 100%; height: 555px;background: #f1b4b4">
+			<div style="padding:80px 0 30px;width: 100%; height: 306px;">
 				<div style="max-width: 1110px;padding: 0 15px;margin: auto; height: 100%">
 					<div style="width:auto; display: flex;margin-left:-15px; margin-right:-15px;height: 100%">
 						<div class="column-pr">
@@ -732,7 +806,7 @@
 				<div style="max-width: 1110px; padding: 0 15px;height: 48px; margin:auto;">
 					<div style="width: 100%; height: 100%; display: flex; align-items: center;">
 						<div style="display: block;text-align: left;">
-							<div style="margin-top: 15px;font-size: 15px;color: #fff">
+							<div style="margin-top: 15px;font-size: 15px;color: #fff; line-height: 1.5;">
 								© Copyright
 								 <a class="page-main" href="https://www.radiustheme.com/demo/wordpress/themes/metro/">Metro 2020</a>
 								 . Designed by 
@@ -772,7 +846,7 @@
 						</div>
 						<div style="display: block; margin: auto">
 							<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
-								<li>
+								<li style="padding-left: 10px">
 									<img class="image-gray" src="./Image/payment1.png">
 								</li>
 								<li style="padding-left: 10px">
@@ -797,7 +871,6 @@
 	<button id="myBut" onclick="topFunction()">
 		<i class="fa fa-angle-double-up"></i>
 	</button>
-	<script type="text/javascript" src="function.js"></script>
-	
+	<script type="text/javascript" src="./function.js"></script>
 </body>
 </html>
