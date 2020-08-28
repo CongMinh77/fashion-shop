@@ -1,10 +1,11 @@
 
 .element-inner{
-	width: 1310px;
+	width: 1349px;
 	height: 547px;
 	margin-left: 19.5px;
 	margin-right: 19.5px;
 	box-sizing: border-box;
+	margin: 0 auto;
 }
 .show-column{
 	width: 307px;
@@ -73,7 +74,8 @@
 }
 .show-element{
 	display: flex;
-	width: 1310px;
+	max-width: 1310px;
+	margin: 0 auto;
 }
 .kind-object li{
 	width: 100%;
@@ -81,21 +83,12 @@
 	border-bottom: 1px solid rgba(236,140,140,0.3);
 	padding:0;
 }
-.input-group::after{
-	content: "" ;
-	position: absolute;
-	background-color: #ddd;
-	margin-top: 10px;
-	top:0;
-	bottom: 0;
-	height: 36px;
-	width:1px;
-}
-.input-group input{
+
+.input-group .input-after{
 	padding: 10px 20px;
 	padding-right: 0px;
 	height: 38px;
-	width: 634px;
+	width: 100%;
 	border: none;
 	box-shadow: none;
 	outline: none;
@@ -103,7 +96,7 @@
 }
 .search{
 	border: none;
-	width: 960px;
+	flex-grow: 1;
 	height: 58px;
 	border: 1px solid #dddddd;
 	border-radius: 4px;
@@ -113,12 +106,12 @@
 }
 .search .search-product{
 	box-sizing: inherit;
-	flex-grow: 1 1 auto;
-	width: 655px;
+	flex-grow: 1;
 }
 .search-drop{
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 .poster-search{
 	padding-left: 10px;
@@ -164,6 +157,17 @@
 	align-items: center;
 	display: flex;
 	justify-content: center;
+}
+.selection::before{
+	content: "";
+	position: absolute;
+	background-color: #ddd;
+	height: 36px;
+	width: 1px;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
 }
 .selection button{
 	display: flex;
@@ -320,16 +324,17 @@ i{
 }
 /*Picture PR*/
 .container-behind{
-	width: 1310px;
+	width: 1349px;
 	height: 325px;
-	margin-left: 19.5px;
-	margin-right: 19.5px;
+	margin:0 auto;
 }
 .container{
+	max-width: 1310px;
 	display: flex;
+	margin: 0 auto;
 }
 .container .con{
-	width: 635px;
+	width: 50%;
 	height: 305px;
 	padding: 10px;
 	border-radius: 5px;
@@ -430,12 +435,12 @@ a.electric-after{
 	width: 1349px;
 	padding-top: 75px;
 	padding-bottom: 100px;
+	margin: 0 auto;
 }
 .our-product .wrap-product{
 	max-width: 1310px;
 	height: 100%;
-	margin-left: 19.5px;
-	margin-right: 19.5px;
+	margin: 0 auto;
 }
 .our-product .element-column-wrap{
 	max-width: 1310px;
@@ -538,6 +543,12 @@ a.present::after{
 	margin-bottom: 20px;
 	height: 100%;
 }
+.hover-effect{
+	overflow:hidden;
+	height: 460px;
+	width: 300px;
+	padding: 0 12px;
+}
 div div.hover-effect:hover .inside-area{
 	opacity: 1;
 	visibility: visible;
@@ -596,7 +607,7 @@ div div.hover-effect:hover .inside-area{
 }
 /*Image background*/
 .background-image{
-	width: 1348.5px;
+	width: 100%;
 	height: 268px;
 	padding-top: 85px;
 	padding-bottom: 90px;
@@ -606,6 +617,7 @@ div div.hover-effect:hover .inside-area{
 	background-position: 0 20px;
 	background-image: url('./Image/back.jpg');
 }
+
 .title-pr{
 	color: #fff;
     font-weight: 600;
@@ -640,6 +652,7 @@ div div.hover-effect:hover .inside-area{
 	height: 500px;
 	padding-top: 70px;
 	padding-bottom: 55px;
+	margin: 0 auto;
 }
 .img-pr{
 	height: 100%;
@@ -749,6 +762,11 @@ div div.hover-effect:hover .inside-area{
     font-style: normal;
 }
 /*Image insta*/
+.insta{
+	width: 100%;
+	height:169px;
+	left: 0;
+}
 .image-in{
 	width: 100%;
 	height: 100%;
@@ -904,4 +922,12 @@ div div.hover-effect:hover .inside-area{
 }
 .wrap-sub div input.subscri:hover{
 	opacity: 0.7;
+}
+
+/*Responsive*/
+
+@media only screen and (min-width: 960px){
+	.background-image, footer, .insta{
+		width: 1349px;
+	}
 }

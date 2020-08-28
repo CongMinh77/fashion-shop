@@ -22,20 +22,15 @@ ul.main-menu{
 	transition: all 0.3s ease 0s;
 }
 .element-main-section-wrap{
-	max-width: 1349px;
 	margin: 0 auto;
 }
 .main{
 	height: 91px;
-	margin-bottom: 5px;
 	/*box-shadow: 0 2px 2px rgba(236,140,140,0.2);*/
-}
-.stuck{
-	position: fixed;
-	top: 0;
-	left: 0;
 	margin: 0 auto;
+	margin-bottom: 5px;
 }
+
 .roll-menu{
     position: fixed;
     top: 0;
@@ -43,7 +38,7 @@ ul.main-menu{
 	z-index: 99;
 	align-items: center;
 	margin: 0 auto;
-	width: 1349px;
+	width: 100%;
 	height: 90px;
 	background-color: #fff;
 	border-bottom: 1px solid rgba(231, 231, 231, 0.3);
@@ -257,7 +252,11 @@ a.menu-after{
 	height: 84px;
 }
 /*Footer*/
-
+footer{
+	width: 100%;
+	height: 555px;
+	background: #f1b4b4;
+}
 .column-pr{
 	width: 255px;
 	padding: 0 15px;

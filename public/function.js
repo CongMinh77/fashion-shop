@@ -29,7 +29,7 @@ window.onscroll = function(){
   }
 };*/
 
-var slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
 
 function currentSlide(n){
