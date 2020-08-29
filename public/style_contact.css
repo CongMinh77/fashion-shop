@@ -41,3 +41,7 @@ div.banner h1{
 	font-size: 15px;
 	line-height: 1;
 }
+
+.banner li a{
+	cursor: pointer;
+}

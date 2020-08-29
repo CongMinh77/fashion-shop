@@ -39,6 +39,7 @@
 	position: relative;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	overflow: hidden;
 }
 
 .kind .kind-object .drop-electric{
@@ -179,7 +180,35 @@
 	width: 100%;
 	height: 100%;
 }
-
+#button-select span{
+	font-size: 16px;
+	color: #444;
+}
+.dropdown-select{
+	width: 81%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate3d(0px, -90px, 0px);
+	background-color: #fff;
+	z-index: 1000;
+	border: 1px solid rgba(0,0,0,.15);
+	display: none;
+}
+.style-menu{
+	padding: 7px 15px 7px 20px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+}
+.style-menu:hover{
+	background-color: #f1b4b4;
+	color: #fff;
+}
 i{
 	color:white;
 	font-size: 20px;
@@ -606,8 +635,20 @@ div div.hover-effect:hover .inside-area{
 	width: 100%;
 }
 /*Image background*/
+.wrap-bg-image{
+	height: 443px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 20px;
+	background-image: url('./Image/back.jpg');
+}
+
 .background-image{
-	width: 100%;
+	width: auto;
+	margin: 0 auto;
+	display: block;
+	z-index: 9;
 	height: 268px;
 	padding-top: 85px;
 	padding-bottom: 90px;
@@ -763,7 +804,6 @@ div div.hover-effect:hover .inside-area{
 }
 /*Image insta*/
 .insta{
-	width: 100%;
 	height:169px;
 	left: 0;
 }
@@ -925,9 +965,10 @@ div div.hover-effect:hover .inside-area{
 }
 
 /*Responsive*/
-
-@media only screen and (min-width: 960px){
-	.background-image, footer, .insta{
+@media (min-width: 768px)
+{
+	.background-image, .insta, .inner-footer{
 		width: 1349px;
+		margin: 0 auto;
 	}
 }

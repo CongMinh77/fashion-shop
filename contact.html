@@ -11,9 +11,9 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWwfiqsen5BuaqM5i4HP6efDIjnLg1WvA&callback=myMap"></script>
 </head>
 <body>
-	<div style="overflow: hidden;display: block; max-width: 1349px; margin: 0 auto;">
+	<div style="overflow: hidden;display: block; margin: 0 auto;">
 	<!-- tarbar -->
-		<header class="main">
+		<header class="main" style="margin-bottom: 0;">
 			<nav class="roll-menu" itemscope itemtype="https://schema.org/siteNavigationElement">
 				<div class="head">
 					<div class="logo"><a href=""><img src="./Image/Logo.jpg"></a></div>
@@ -95,8 +95,8 @@
 							<nav style="width: 100%; height: 28px;">
 								<ul style="padding-left:496px;display: flex;">
 									<li style="margin: 0;">
-										<a class="icon-after" href="./index.html">
-										<span>Home</span>
+										<a class="icon-after" href=".">
+											<span>Home</span>
 										</a>
 									</li>
 									<li style="margin: 0;">
@@ -108,11 +108,37 @@
 					</div>
 				</div>
 			</div>
-			<div>
-				
+			<div style="width: 100%;height: 1429px;">
+				<div style="width: 100%;height: 1429px;">
+					<section style="width: 1349px;height: 572px; left: 0;position: relative;">
+						<div style="width: 100%; height: 100%;display: flex;">
+							<div style="width: 50%; height: 100%;">
+								<div id="map" style="width: 100%;height: 100%">
+									<!--iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0474867986363!2d90.41913401479259!3d23.781323284574174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c799effcbe0d%3A0x975fce15f7529550!2sRadius+Theme!5e0!3m2!1sen!2sbd!4v1561115381923!5m2!1sen!2sbd" style="width: 100%; height: 100%; border: 0;" allowfullscreen></iframe-->
+								</div>
+							</div>
+							<div style="width: 50%; height: 100%;">
+								<div style="padding: 80px 0 45px 50px;height: 100%; width: 100%;">
+									
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 	</div>
-	
+	<script type="text/javascript">
+		function myMap() {
+		  var mapCanvas = document.getElementById("map");
+		  var mapOptions = {
+		    center: new google.maps.LatLng(20.966090, 105.778680),
+		    zoom: 5
+		  };
+		  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWwfiqsen5BuaqM5i4HP6efDIjnLg1WvA&callback=myMap"></script>
+
 </body>
 </html>

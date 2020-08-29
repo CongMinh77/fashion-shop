@@ -107,14 +107,26 @@
 							<div class="select-dropdown">
 								<div class="part-select">
 									<div class="selection">
-										<button type="button">
-											<ul style="padding: 0;">
-												<li>All categories</li>
-											</ul>
+										<button id="button-select" type="button">
+											<span id="choice">All Categories</span>
 											<div class="select-button">
 												<i class="fas fa-caret-down"></i>
 											</div>
 										</button>
+										<div class="dropdown-select">
+											<ul style="padding:0;height: auto;">
+												<li class="style-menu">All Categories</li>
+												<li class="style-menu">Men</li>
+												<li class="style-menu">Women</li>
+												<li class="style-menu">Electronics</li>
+												<li class="style-menu">Jewellery</li>
+												<li class="style-menu">Shoes</li>
+												<li class="style-menu">Kid's Wear</li>
+												<li class="style-menu">Sports</li>
+												<li class="style-menu">Toys</li>
+												<li class="style-menu">Gift Corners</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -478,21 +490,23 @@
 			</div>
 		</section>
 		<!--Image attachment-->
-		<section class="background-image">
-			<div style="max-width: 1309.5px;height: auto; margin: auto">
-				<div style="width: 100%">
-					<div style="padding: 10px;width: 100%">
-						<div style="flex-wrap: wrap;">
-							<div>
-								<h3 class="title-pr">End of Season Clearance
-									<br>Sale upto 30%
-								</h3>
-								<p class="subtitle">
-									Stock is limited. Order now to avoid
-									<br>
-									disappointment
-								</p>
-								<a class="to-shop" href="#">Shop now</a>
+		<section class="wrap-bg-image">
+			<div class="background-image">
+				<div style="width: 1309.5px;height: auto; margin: auto">
+					<div style="width: 100%">
+						<div style="padding: 10px;width: 100%">
+							<div style="flex-wrap: wrap;">
+								<div>
+									<h3 class="title-pr">End of Season Clearance
+										<br>Sale upto 30%
+									</h3>
+									<p class="subtitle">
+										Stock is limited. Order now to avoid
+										<br>
+										disappointment
+									</p>
+									<a class="to-shop" href="#">Shop now</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -623,7 +637,7 @@
 		</section>
 		<!--Image Insta-->
 		<div class="insta">
-			<div style="width: auto;height:169px;position: relative;">
+			<div style="width: 100%;height:169px;position: relative;">
 				<div style="display: flex;width: 100%;height: 100%">
 					<div style="width: 12.5%; height: 100%">
 						<div style="width: 100%;height: 100%; position: relative;">
@@ -710,159 +724,161 @@
 		</section>
 		<!--Footer-->
 		<footer>
-			<div style="padding:80px 0 30px;width: 100%; height: 306px;">
-				<div style="max-width: 1110px;padding: 0 15px;margin: auto; height: 100%">
-					<div style="width:auto; display: flex;margin-left:-15px; margin-right:-15px;height: 100%">
-						<div class="column-pr">
-							<div style="width: 100%; height: auto; display: flex; margin-bottom: 30px">
-								<img src="./Image/logo-img.png">
-								<h2 style="color: #fff; font-size: 60px; margin: 0; padding-top: 32px">NaHy</h2>
-							</div>
-							<ul style="padding: 0">
-								<li style="display: flex; margin-bottom: 20px;">
-									<i style="font-size: 25px;color:#fff" class="fas fa-map-marker-alt"></i>
-									<span style="padding-left: 20.25px;font-size: 16px;   line-height:1.1; color: #fff">No 14, LK 25 Le Lai, Ha Dong, Ha Noi</span>
-								</li>
-								<li style="display: flex; margin-bottom: 20px">
-									<img style="height: 28px; width: 24px;padding: 0;" src="./Image/phone.svg">
-									<a style="padding-top:4px;color: #fff; font-size: 17px;padding-left: 15px;outline: none" href="tel:+84974375157">+84 123 456 789</a>
-								</li>
-								<li style="display: flex; margin-bottom: 20px">
-									<img style="height: 28px; width: 24px;padding: 0;" src="./Image/mail.svg">
-									<a style="padding-top:4px;color: #fff; font-size: 17px;padding-left: 15px;outline: none" href="mailto:info@example.com">info@example.com</a>
-								</li>
-							</ul>
-						</div>
-						<div class="column-pr">
-							<h3>INFORMATION</h3>
-							<div>
-								<ul style="padding: 0;">
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">About Us</a>
+			<div class="inner-footer">
+				<div style="padding:80px 0 30px;width: 100%; height: 306px;">
+					<div style="max-width: 1110px;padding: 0 15px;margin: auto; height: 100%">
+						<div style="width:auto; display: flex;margin-left:-15px; margin-right:-15px;height: 100%">
+							<div class="column-pr">
+								<div style="width: 100%; height: auto; display: flex; margin-bottom: 30px">
+									<img src="./Image/logo-img.png">
+									<h2 style="color: #fff; font-size: 60px; margin: 0; padding-top: 32px">NaHy</h2>
+								</div>
+								<ul style="padding: 0">
+									<li style="display: flex; margin-bottom: 20px;">
+										<i style="font-size: 25px;color:#fff" class="fas fa-map-marker-alt"></i>
+										<span style="padding-left: 20.25px;font-size: 16px;   line-height:1.1; color: #fff">No 14, LK 25 Le Lai, Ha Dong, Ha Noi</span>
 									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Latest Post</a>
+									<li style="display: flex; margin-bottom: 20px">
+										<img style="height: 28px; width: 24px;padding: 0;" src="./Image/phone.svg">
+										<a style="padding-top:4px;color: #fff; font-size: 17px;padding-left: 15px;outline: none" href="tel:+84974375157">+84 123 456 789</a>
 									</li>
-									<li class="li-footer"> 
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Selling Tips</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Advertising</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Contact Us</a>
+									<li style="display: flex; margin-bottom: 20px">
+										<img style="height: 28px; width: 24px;padding: 0;" src="./Image/mail.svg">
+										<a style="padding-top:4px;color: #fff; font-size: 17px;padding-left: 15px;outline: none" href="mailto:info@example.com">info@example.com</a>
 									</li>
 								</ul>
 							</div>
-						</div>
-						<div class="column-pr">
-							<h3>MY ACCOUNT</h3>
-							<div>
-								<ul style="padding: 0;">
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">My Account</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Login/Register</a>
-									</li>
-									<li class="li-footer"> 
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Cart</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Wishlist</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Order History</a>
-									</li>
-								</ul>
+							<div class="column-pr">
+								<h3>INFORMATION</h3>
+								<div>
+									<ul style="padding: 0;">
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">About Us</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Latest Post</a>
+										</li>
+										<li class="li-footer"> 
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Selling Tips</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Advertising</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Contact Us</a>
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div class="column-pr">
-							<h3>HELP & SUPPORT</h3>
-							<div>
-								<ul style="padding: 0;">
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">How To Shop</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Payment</a>
-									</li>
-									<li class="li-footer"> 
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Returns</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Delivery</a>
-									</li>
-									<li class="li-footer">
-										<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Privacy & Cookie Policy</a>
-									</li>
-								</ul>
+							<div class="column-pr">
+								<h3>MY ACCOUNT</h3>
+								<div>
+									<ul style="padding: 0;">
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">My Account</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Login/Register</a>
+										</li>
+										<li class="li-footer"> 
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Cart</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Wishlist</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Order History</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="column-pr">
+								<h3>HELP & SUPPORT</h3>
+								<div>
+									<ul style="padding: 0;">
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">How To Shop</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8"href="#" target="_blank">Payment</a>
+										</li>
+										<li class="li-footer"> 
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Returns</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Delivery</a>
+										</li>
+										<li class="li-footer">
+											<a style="font-size:16px; color: #fff;opacity: 0.8" href="#" target="_blank">Privacy & Cookie Policy</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div style="border-bottom: 1px solid rgba(255,255,255,.2);"></div>
-			<div style="padding: 45px 0;height: 48px">
-				<div style="max-width: 1110px; padding: 0 15px;height: 48px; margin:auto;">
-					<div style="width: 100%; height: 100%; display: flex; align-items: center;">
-						<div style="display: block;text-align: left;">
-							<div style="margin-top: 15px;font-size: 15px;color: #fff; line-height: 1.5;">
-								© Copyright
-								 <a class="page-main" href="https://www.radiustheme.com/demo/wordpress/themes/metro/">Metro 2020</a>
-								 . Designed by 
-								<a class="page-main" href="https://www.radiustheme.com/">RadiusTheme</a>
-								 and Developed by
-								<a class="page-main" href="https://www.facebook.com/NCM.SE7EN">NCM</a>
+				<div style="width:100%;border-bottom: 1px solid rgba(255,255,255,.2);"></div>
+				<div style="padding: 45px 0;height: 48px">
+					<div style="max-width: 1110px; padding: 0 15px;height: 48px; margin:auto;">
+						<div style="width: 100%; height: 100%; display: flex; align-items: center;">
+							<div style="display: block;text-align: left;">
+								<div style="margin-top: 15px;font-size: 15px;color: #fff; line-height: 1.5;">
+									© Copyright
+									 <a class="page-main" href="https://www.radiustheme.com/demo/wordpress/themes/metro/">Metro 2020</a>
+									 . Designed by 
+									<a class="page-main" href="https://www.radiustheme.com/">RadiusTheme</a>
+									 and Developed by
+									<a class="page-main" href="https://www.facebook.com/NCM.SE7EN">NCM</a>
+								</div>
 							</div>
-						</div>
-						<div style="display: block; margin:auto;">
-							<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
-								<li class="icon-footer">
-									<a href="#" target="_blank">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</li>
-								<li class="icon-footer">
-									<a href="#" target="_blank">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-								<li class="icon-footer">
-									<a href="#" target="_blank">
-										<i class="fa fa-youtube"></i>
-									</a>
-								</li>
-								<li class="icon-footer">
-									<a href="#" target="_blank">
-										<i class="fa fa-instagram"></i>
-									</a>
-								</li>
-								<li class="icon-footer">
-									<a href="#" target="_blank">
-										<i class="fa fa-rss"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div style="display: block; margin: auto">
-							<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
-								<li style="padding-left: 10px">
-									<img class="image-gray" src="./Image/payment1.png">
-								</li>
-								<li style="padding-left: 10px">
-									<img class="image-gray"  src="./Image/payment2.png">
-								</li>
-								<li style="padding-left: 10px">
-									<img class="image-gray" style="height: 36px; width: 36px" src="./Image/logo-momo.png">
-								</li>
-								<li style="padding-left: 10px">
-									<img class="image-gray" style="height: 36px; width: 36px" src="./Image/zalo-pay.png">
-								</li>
-								<li style="padding-left: 10px">
-									<img class="image-gray" style="height: 36px; width: 36px" src="./Image/logo-apay.png">
-								</li>
-							</ul>
+							<div style="display: block; margin:auto;">
+								<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
+									<li class="icon-footer">
+										<a href="#" target="_blank">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li class="icon-footer">
+										<a href="#" target="_blank">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li class="icon-footer">
+										<a href="#" target="_blank">
+											<i class="fa fa-youtube"></i>
+										</a>
+									</li>
+									<li class="icon-footer">
+										<a href="#" target="_blank">
+											<i class="fa fa-instagram"></i>
+										</a>
+									</li>
+									<li class="icon-footer">
+										<a href="#" target="_blank">
+											<i class="fa fa-rss"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div style="display: block; margin: auto">
+								<ul style="display:flex;list-style: disc; margin: 0; padding: 0;">
+									<li style="padding-left: 10px">
+										<img class="image-gray" src="./Image/payment1.png">
+									</li>
+									<li style="padding-left: 10px">
+										<img class="image-gray"  src="./Image/payment2.png">
+									</li>
+									<li style="padding-left: 10px">
+										<img class="image-gray" style="height: 36px; width: 36px" src="./Image/logo-momo.png">
+									</li>
+									<li style="padding-left: 10px">
+										<img class="image-gray" style="height: 36px; width: 36px" src="./Image/zalo-pay.png">
+									</li>
+									<li style="padding-left: 10px">
+										<img class="image-gray" style="height: 36px; width: 36px" src="./Image/logo-apay.png">
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

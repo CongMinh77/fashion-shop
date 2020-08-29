@@ -253,9 +253,13 @@ a.menu-after{
 }
 /*Footer*/
 footer{
-	width: 100%;
 	height: 555px;
 	background: #f1b4b4;
+}
+.inner-footer{
+	width: 100%;
+	margin: 0 auto;
+	background-color: #f1b4b4;
 }
 .column-pr{
 	width: 255px;

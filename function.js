@@ -62,3 +62,18 @@ function showSlides(n){
   */
   slides[slideIndex-1].style.display = "block";
 }
+
+$(document).ready(function(){
+  $("#button-select").click(function(){
+    $(".dropdown-select").css({"display":"block"});
+      $(".style-menu").click(function(){
+
+      var i = $(this).text();
+      
+      $("#choice").text("");
+      $("#choice").text(i);
+
+      $(".dropdown-select").css({"display":"none"});
+    });
+  });
+});

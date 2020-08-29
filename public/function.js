@@ -29,7 +29,8 @@ window.onscroll = function(){
   }
 };*/
 
-var slideIndex = 0;
+var slideIndex = 1;
+// if want auto slide show change: var slideIndex = 0;
 showSlides(slideIndex);
 
 function currentSlide(n){
@@ -39,6 +40,7 @@ function currentSlide(n){
 function showSlides(n){
   var i;
   var slides = document.getElementsByClassName("outside-pr");
+  // and you must comment line 44 to 50
   if(n > slides.length) {
     slideIndex = 1;
   }
@@ -50,8 +52,28 @@ function showSlides(n){
   {
     slides[i].style.display = "none";
   }
+  /*
+  if want auto slide show add this line
+
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1} 
-  slides[slideIndex-1].style.display = "block";
+  
   setTimeout(showSlides, 10000);
+  */
+  slides[slideIndex-1].style.display = "block";
 }
+
+$(document).ready(function(){
+  $("#button-select").click(function(){
+    $(".dropdown-select").css({"display":"block"});
+      $(".style-menu").click(function(){
+
+      var i = $(this).text();
+      
+      $("#choice").text("");
+      $("#choice").text(i);
+
+      $(".dropdown-select").css({"display":"none"});
+    });
+  });
+});
